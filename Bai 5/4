@@ -1,0 +1,44 @@
+#include<iostream>
+#include<algorithm> 
+using namespace std;
+int main()
+{
+    int n,q;
+    cin>>n;
+    int arr[n],chiSo[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+        chiSo[i]=i+1;
+    }
+    //nhap n va n so nguyen, dat chi so tu 1 cho n so nguyen.
+    cin>>q;
+    int test[q],k[q];
+    for(int i=0;i<q;i++){
+        cin>>test[i];
+        k[i]=1;
+    }
+    //nhap q va q test 
+    for(int i=0;i<n;i++){
+        for(int j=0;j<q;j++){
+            if(test[j]==arr[i]){
+                cout<<arr[i]<<" YES"<<" - "<<chiSo[i]<<endl;
+                k[j]=0;
+                break;
+            }
+
+        }
+    }
+    //Chay 2 loop de check test co bang phan tu nao trong mang arr[], in theo y/c.
+    sort(arr , arr + n);
+    for(int i=0;i<q;i++){
+        if(k[i]==1){
+            for(int j=0;j<n;j++){
+                if(arr[j]>test[i]) {
+                    cout<<test[i]<<" NO - "<<chiSo[j]<<endl;
+                    break;
+                }
+            }
+        }
+    }
+}
