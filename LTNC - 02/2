@@ -1,0 +1,14 @@
+#include <iostream>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+    int x1,x2,v1,v2;
+    cin>>x1>>v1;
+    cin>>x2>>v2;
+    int t = abs((x1-x2)/(v2-v1));
+    if(x1+v1*t==x2+v2*t) cout<<"YES";
+    else cout<<"NO";
+    return 0;
+}
