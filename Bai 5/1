@@ -1,7 +1,0 @@
-void update(int*a, int*b)
-{
-    int tong = a+b;
-    int hieu = abs(a-b);
-    a = tong;
-    b = hieu;
-}
