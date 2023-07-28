@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string hackerrankInString(string s) {
+    string temp = "hackerrank";
+    int tempindex=0;
+    for(int i;i<s.size();i++){
+        if(s[i]==temp[tempindex]){
+            tempindex++;
+        }
+    }
+    if(tempindex==temp.size()) return "YES";
+    else return "NO";
+}
+
+int main()
+{
+    string s;
+    cin>>s;
+    cout<<hackerrankInString(s);
+    return 0;
+}
