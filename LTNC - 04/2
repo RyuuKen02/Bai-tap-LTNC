@@ -1,0 +1,9 @@
+int equalizeArray(vector<int> arr) {
+    int max=0;
+    map<int , int> mp;
+    for(int temp : arr){
+        mp[temp]++;
+        if(max<mp[temp]) max=mp[temp];
+    }
+    return arr.size() - max;
+}

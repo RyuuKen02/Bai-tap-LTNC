@@ -1,0 +1,16 @@
+int palindromeIndex(string s) {
+    int left = 0;
+    int right = s.size()-1;
+    while(left<right){
+        if(s[left]!=s[right]){
+            if(s[right]==s[left+1]&&s[right-1]==s[left+2]) return left;
+            if(s[left]==s[right-1]&&s[left+1]==s[right-2]) return right;
+        }
+        else {
+            left++;
+            right--;
+        }
+    }
+    return -1;
+
+}
