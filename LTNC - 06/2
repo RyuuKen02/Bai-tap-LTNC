@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+
+class student {
+  private:
+      int age,standard;
+      string fist_name,last_name;
+  public:
+      void set_age(int a){
+          age=a;
+      }  
+      void set_standard(int s){
+          standard=s;
+      }
+      void set_fist_name(string f){
+          fist_name=f;
+      }
+      void set_last_name(string l){
+          last_name=l;
+      }
+      int get_age(){
+          return age;
+      }
+      int get_standard(){
+          return standard;
+      }
+      string get_fist_name(){
+          return fist_name;
+      }
+      string get_last_name(){
+          return last_name;
+      }
+};
+
+int main() {
+    int a,s;
+    string l,f;
+    cin>>a>>f>>l>>s;
+    student st;
+    st.set_age(a);
+    st.set_fist_name(f);
+    st.set_last_name(l);
+    st.set_standard(s);
+    cout<<st.get_age()<<endl<<st.get_last_name()<<", "<<st.get_fist_name()<<endl<<st.get_standard()<<endl<<endl;
+    cout<<st.get_age()<<","<<st.get_fist_name()<<","<<st.get_last_name()<<","<<st.get_standard();
+    return 0;
+}
